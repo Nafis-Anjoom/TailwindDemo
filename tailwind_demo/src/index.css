@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    background-color: #181818;
+    @apply font-semibold text-base text-white;
+}
+
+.sidebar div div {
+    @apply my-1;
+}
+
+.track div {
+    @apply flex-grow truncate p-1;
+}
