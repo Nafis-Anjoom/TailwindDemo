@@ -16,10 +16,10 @@ body {
 }
 
 .track div {
-    @apply flex-grow truncate p-1;
+    @apply flex-grow truncate py-1 px-4;
 }
 
 .track > .track-num {
-    @apply flex-none grow-0 px-4;
+    @apply flex-none grow-0;
 }
 

@@ -1,11 +1,70 @@
 import PopularSongs from "./popularsongs";
 import Release from "./release";
 import Banner from "./banner";
-import alleyezonme from "../images/Alleyezonme.jpg";
 import { IoMdPlay } from "react-icons/io";
 import { BsThreeDots } from "react-icons/bs";
 
+import joey from "../images/joey.jpg";
+import loveCover from "../images/loveCover.jpg";
+import allAmerikkkanCover from "../images/allAmerikkkanCover.jpg";
+import ninteenCover from "../images/1999Cover.jpg";
+import headHighCover from "../images/headHighCover.jpg";
+import escapeFromNyCover from "../images/escapeFromNyCover.jpg";
+import b4daCover from "../images/b4daCover.jpg";
+import summerKnightsCover from "../images/summerKnightsCover.jpg";
+
+
 export default function Body() {
+    const popularReleases = [
+        {
+            "name": "Head High",
+            "releaseYear": "Latest Release",
+            "type": "Single",
+            "cover": headHighCover
+        },
+        {
+            "name": "Love Is Only a Feeling",
+            "releaseYear": "2017",
+            "type": "Single",
+            "cover": loveCover
+        },
+        {
+            "name": "ALL-AMERIKKKAN BADA$$",
+            "releaseYear": "2017",
+            "type": "Album",
+            "cover": allAmerikkkanCover
+        },
+        {
+            "name": "1999",
+            "releaseYear": "2012",
+            "type": "Album",
+            "cover": ninteenCover
+        }
+    ];
+
+    const albums = [
+        {
+            "name": "Escape From New York",
+            "releaseYear": "2019",
+            "cover": escapeFromNyCover
+        },
+        {
+            "name": "ALL-AMERIKKKAN BADA$$",
+            "releaseYear": "2017",
+            "cover": allAmerikkkanCover
+        },
+        {
+            "name": "B4.DA.$$",
+            "releaseYear": "2015",
+            "cover": b4daCover
+        },
+        {
+            "name": "Summer Knights",
+            "releaseYear": "2013",
+            "cover": summerKnightsCover
+        }
+    ];
+
     return (
         <div className="sm:pl-28 lg:pl-56">
             <Banner />
@@ -26,13 +85,13 @@ export default function Body() {
                     <div className="w-1/2 2xl:w-auto">
                         <div className="text-2xl font-bold py-2">Liked Songs</div>
                         <div className="flex">
-                            <img src={alleyezonme} className="rounded-full max-h-28"/>
+                            <img src={joey} className="rounded-full max-h-28"/>
                             <div className="my-auto mx-4">
                                 <h4 className="font-bold truncate hover:underline hover:cursor-pointer">
-                                    You've liked 43 songs
+                                    You've liked 52 songs
                                 </h4>
                                 <h5 className="text-sm text-[rgb(179,179,179)]">
-                                    By Pusha T
+                                    By Joey Bada$$
                                 </h5>
                             </div>
                         </div>
@@ -40,13 +99,13 @@ export default function Body() {
                     <div className="w-1/2 2xl:w-auto">
                         <div className="text-2xl font-bold py-2">Artist pick</div>
                         <div className="flex">
-                            <img src={alleyezonme} className="max-h-28"/>
+                            <img src={headHighCover} className="max-h-28"/>
                             <div className="my-auto mx-4">
                                 <h4 className="font-bold truncate hover:underline hover:cursor-pointer">
-                                    It's Almost Dry
+                                    Head High
                                 </h4>
                                 <h5 className="text-sm text-[rgb(179,179,179)]">
-                                    Album
+                                    Single
                                 </h5>
                             </div>
                         </div>
@@ -55,18 +114,12 @@ export default function Body() {
                 
             </div>
             <div className="text-2xl font-bold py-2">Popular releases</div>
-            <div className="flex">
-                <Release />
-                <Release />
-                <Release />
-                <Release />
+            <div className="flex overflow-y-auto">
+                {popularReleases.map((release) => <Release {...release} />)}
             </div>
             <div className="text-2xl font-bold py-2">Albums</div>
-            <div className="flex">
-                <Release />
-                <Release />
-                <Release />
-                <Release />
+            <div className="flex overflow-y-auto">
+                {albums.map((album) => <Release {...album} type="Album" />)}
             </div>
             
         </div>

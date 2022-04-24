@@ -1,4 +1,4 @@
-import alleyezonme from "../images/Alleyezonme.jpg"; 
+import alleyezonme from "../images/chancesCover.jpg"; 
 import { ImPrevious2, ImPause2, ImNext2, ImShuffle } from 'react-icons/im';
 import { BsArrowRepeat } from 'react-icons/bs';
 export default function Player() {
