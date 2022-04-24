@@ -12,7 +12,7 @@ body {
 }
 
 .sidebar > div > div > span {
-    @apply sm:hidden lg:inline pl-2;
+    @apply hidden lg:inline pl-2;
 }
 
 .track div {
