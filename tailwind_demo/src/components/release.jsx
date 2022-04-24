@@ -2,7 +2,7 @@ import alleyezonme from "../images/Alleyezonme.jpg";
 
 export default function Release() {
     return (
-        <div className="bg-[#232323] p-4 w-fit h-fit m-2">
+        <div className="bg-[#232323] p-4 w-fit h-fit m-2 hover:bg-[#383838]">
             <div>
                 <img src={alleyezonme} alt="" className="max-h-48"/>
             </div>

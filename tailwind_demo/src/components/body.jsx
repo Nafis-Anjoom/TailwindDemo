@@ -5,7 +5,7 @@ import alleyezonme from "../images/Alleyezonme.jpg";
 
 export default function Body() {
     return (
-        <div className="lg:pl-48">
+        <div className="sm:pl-28 lg:pl-56">
             <Banner />
             <div className="md:flex md:flex-col 2xl:flex-row mt-4">
                 <PopularSongs />
@@ -15,7 +15,7 @@ export default function Body() {
                         <div className="flex">
                             <img src={alleyezonme} className="rounded-full max-h-28"/>
                             <div className="my-auto mx-4">
-                                <h4 className="max-w-[150px] md:max-w-[250px] truncate">
+                                <h4 className="font-bold truncate hover:underline hover:cursor-pointer">
                                     You've liked 43 songs
                                 </h4>
                                 <h5 className="text-sm text-[rgb(179,179,179)]">
@@ -29,7 +29,7 @@ export default function Body() {
                         <div className="flex">
                             <img src={alleyezonme} className="max-h-28"/>
                             <div className="my-auto mx-4">
-                                <h4 className="max-w-[150px] md:max-w-[250px] truncate">
+                                <h4 className="font-bold truncate hover:underline hover:cursor-pointer">
                                     It's Almost Dry
                                 </h4>
                                 <h5 className="text-sm text-[rgb(179,179,179)]">

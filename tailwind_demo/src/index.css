@@ -7,10 +7,19 @@ body {
     @apply font-semibold text-base text-white;
 }
 
-.sidebar div div {
-    @apply my-1;
+.sidebar > div > div {
+    @apply flex items-center py-2 px-7 hover:bg-[#383838] hover:cursor-pointer;
+}
+
+.sidebar > div > div > span {
+    @apply sm:hidden lg:inline pl-2;
 }
 
 .track div {
     @apply flex-grow truncate p-1;
 }
+
+.track > .track-num {
+    @apply flex-none grow-0 px-4;
+}
+
