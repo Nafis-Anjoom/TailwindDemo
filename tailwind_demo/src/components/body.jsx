@@ -2,11 +2,24 @@ import PopularSongs from "./popularsongs";
 import Release from "./release";
 import Banner from "./banner";
 import alleyezonme from "../images/Alleyezonme.jpg";
+import { IoMdPlay } from "react-icons/io";
+import { BsThreeDots } from "react-icons/bs";
 
 export default function Body() {
     return (
         <div className="sm:pl-28 lg:pl-56">
             <Banner />
+            <div className="flex items-center mt-7">
+                <button className="bg-[#18b153] p-3 rounded-full text-center mr-9 hover:bg-[#21df6a]">
+                    <div>
+                        <span className="flex relative left-1">
+                            <IoMdPlay size={37} color="black" className=""/>
+                        </span>
+                    </div>
+                </button>
+                <button className="border-[1.5px] border-[#686868] py-1.5 px-3 rounded-md font-semibold mr-9 hover:border-white">Follow</button>
+                <button className="opacity-40 hover:opacity-100"><BsThreeDots size={30} /></button>
+            </div>
             <div className="md:flex md:flex-col 2xl:flex-row mt-4">
                 <PopularSongs />
                 <div className="flex w-full 2xl:flex-col 2xl:w-[40%]">
