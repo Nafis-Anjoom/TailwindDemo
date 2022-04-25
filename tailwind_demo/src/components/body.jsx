@@ -66,62 +66,65 @@ export default function Body() {
     ];
 
     return (
-        <div className="sm:pl-28 lg:pl-56">
-            <Banner />
-            <div className="flex items-center mt-7">
-                <button className="bg-[#18b153] p-3 rounded-full text-center mr-9 hover:bg-[#21df6a]">
-                    <div>
-                        <span className="flex relative left-1">
-                            <IoMdPlay size={37} color="black" className=""/>
-                        </span>
-                    </div>
-                </button>
-                <button className="border-[1.5px] border-[#686868] py-1.5 px-3 rounded-md font-semibold mr-9 hover:border-white">Follow</button>
-                <button className="opacity-40 hover:opacity-100"><BsThreeDots size={30} /></button>
+        <>
+            <div className="sm:pl-20 lg:pl-52">
+                <Banner />
             </div>
-            <div className="md:flex md:flex-col 2xl:flex-row mt-4">
-                <PopularSongs />
-                <div className="flex w-full 2xl:flex-col 2xl:w-[40%]">
-                    <div className="w-1/2 2xl:w-auto">
-                        <div className="text-2xl font-bold py-2">Liked Songs</div>
-                        <div className="flex">
-                            <img src={joey} className="rounded-full max-h-28"/>
-                            <div className="my-auto mx-4">
-                                <h4 className="font-bold truncate hover:underline hover:cursor-pointer">
-                                    You've liked 52 songs
-                                </h4>
-                                <h5 className="text-sm text-[rgb(179,179,179)]">
-                                    By Joey Bada$$
-                                </h5>
-                            </div>
+            <div className="pl-5 pb-10 sm:pl-28 lg:pl-56">
+                <div className="flex items-center mt-7">
+                    <button className="bg-[#18b153] p-3 rounded-full text-center mr-9 hover:bg-[#21df6a]">
+                        <div>
+                            <span className="flex relative left-1">
+                                <IoMdPlay size={37} color="black" className=""/>
+                            </span>
                         </div>
-                    </div>
-                    <div className="w-1/2 2xl:w-auto">
-                        <div className="text-2xl font-bold py-2">Artist pick</div>
-                        <div className="flex">
-                            <img src={headHighCover} className="max-h-28"/>
-                            <div className="my-auto mx-4">
-                                <h4 className="font-bold truncate hover:underline hover:cursor-pointer">
-                                    Head High
-                                </h4>
-                                <h5 className="text-sm text-[rgb(179,179,179)]">
-                                    Single
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
+                    </button>
+                    <button className="border-[1.5px] border-[#686868] py-1.5 px-3 rounded-md font-semibold mr-9 hover:border-white">Follow</button>
+                    <button className="opacity-40 hover:opacity-100"><BsThreeDots size={30} /></button>
                 </div>
-                
+                <div className="flex flex-col 2xl:flex-row mt-4">
+                    <PopularSongs />
+                    <div className="flex flex-col md:flex-row 2xl:flex-col 2xl:w-[40%] w-full">
+                        <div className="w-1/2 2xl:w-auto">
+                            <div className="text-2xl font-bold py-2">Liked Songs</div>
+                            <div className="flex">
+                                <img src={joey} className="rounded-full max-h-28"/>
+                                <div className="my-auto mx-4">
+                                    <h4 className="font-bold truncate hover:underline hover:cursor-pointer">
+                                        You've liked 52 songs
+                                    </h4>
+                                    <h5 className="text-sm text-[rgb(179,179,179)]">
+                                        By Joey Bada$$
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="w-1/2 2xl:w-auto">
+                            <div className="text-2xl font-bold py-2">Artist pick</div>
+                            <div className="flex">
+                                <img src={headHighCover} className="max-h-28"/>
+                                <div className="my-auto mx-4">
+                                    <h4 className="font-bold truncate hover:underline hover:cursor-pointer">
+                                        Head High
+                                    </h4>
+                                    <h5 className="text-sm text-[rgb(179,179,179)]">
+                                        Single
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div className="text-2xl font-bold py-2">Popular releases</div>
+                <div className="flex overflow-y-auto">
+                    {popularReleases.map((release) => <Release {...release} />)}
+                </div>
+                <div className="text-2xl font-bold py-2">Albums</div>
+                <div className="flex overflow-y-auto">
+                    {albums.map((album) => <Release {...album} type="Album" />)}
+                </div>   
             </div>
-            <div className="text-2xl font-bold py-2">Popular releases</div>
-            <div className="flex overflow-y-auto">
-                {popularReleases.map((release) => <Release {...release} />)}
-            </div>
-            <div className="text-2xl font-bold py-2">Albums</div>
-            <div className="flex overflow-y-auto">
-                {albums.map((album) => <Release {...album} type="Album" />)}
-            </div>
-            
-        </div>
+        </>
     );
 }

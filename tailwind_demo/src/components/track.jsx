@@ -4,7 +4,7 @@ export default function Track(props) {
             <div className="track-num">{props.index}</div>
             <img className="h-14 mr-3 py-1" src={props.cover} alt={props.album}/>
             <div className="w-60">{props.name}</div>
-            <div className="w-56">{props.listens}</div>
+            <div className="w-56 hidden sm:inline-block">{props.listens}</div>
             <div className="w-24 text-right">{props.duration}</div>
         </div>
     );

@@ -6,8 +6,8 @@ import { IconContext } from 'react-icons';
 
 export default function Sidebar() {
     return (
-        <div className="sidebar fixed top-0 left-0 h-screen m-0 flex flex-col bg-black text-white lg:w-fit">
-            <div className="mt-4 lg:inline-block">
+        <div className="hidden sidebar fixed top-0 left-0 h-screen m-0 sm:flex flex-col bg-black text-white lg:w-fit">
+            <div className="mt-4">
                     <IconContext.Provider value={{size: 32}}>
                         <div>
                             <RiHome2Line />
