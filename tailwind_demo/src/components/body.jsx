@@ -12,6 +12,8 @@ import headHighCover from "../images/headHighCover.jpg";
 import escapeFromNyCover from "../images/escapeFromNyCover.jpg";
 import b4daCover from "../images/b4daCover.jpg";
 import summerKnightsCover from "../images/summerKnightsCover.jpg";
+import LikedSongs from "./likedSongs";
+import ArtistPick from "./artistPick";
 
 
 export default function Body() {
@@ -85,34 +87,8 @@ export default function Body() {
                 <div className="flex flex-col 2xl:flex-row mt-4">
                     <PopularSongs />
                     <div className="flex flex-col md:flex-row 2xl:flex-col 2xl:w-[40%] w-full">
-                        <div className="w-1/2 2xl:w-auto">
-                            <div className="text-2xl font-bold py-2">Liked Songs</div>
-                            <div className="flex">
-                                <img src={joey} className="rounded-full max-h-28"/>
-                                <div className="my-auto mx-4">
-                                    <h4 className="font-bold truncate hover:underline hover:cursor-pointer">
-                                        You've liked 52 songs
-                                    </h4>
-                                    <h5 className="text-sm text-[rgb(179,179,179)]">
-                                        By Joey Bada$$
-                                    </h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="w-1/2 2xl:w-auto">
-                            <div className="text-2xl font-bold py-2">Artist pick</div>
-                            <div className="flex">
-                                <img src={headHighCover} className="max-h-28"/>
-                                <div className="my-auto mx-4">
-                                    <h4 className="font-bold truncate hover:underline hover:cursor-pointer">
-                                        Head High
-                                    </h4>
-                                    <h5 className="text-sm text-[rgb(179,179,179)]">
-                                        Single
-                                    </h5>
-                                </div>
-                            </div>
-                        </div>
+                        <LikedSongs cover={joey} artist="Joey Bada$$" likeCount={52}/>
+                        <ArtistPick cover={headHighCover} name="Head High" type="Single" />
                     </div>
                     
                 </div>
@@ -128,3 +104,6 @@ export default function Body() {
         </>
     );
 }
+
+
+
