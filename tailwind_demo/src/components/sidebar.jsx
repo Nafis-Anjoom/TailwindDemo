@@ -9,29 +9,29 @@ export default function Sidebar() {
         <div className="hidden sidebar fixed top-0 left-0 h-screen m-0 sm:flex flex-col bg-black text-white lg:w-fit">
             <div className="mt-4">
                     <IconContext.Provider value={{size: 32}}>
-                        <div>
+                        <div className="flex items-center py-2 px-7 hover:bg-[#383838] hover:cursor-pointer">
                             <RiHome2Line />
-                            <span>Home</span>
+                            <span className="hidden lg:inline pl-2">Home</span>
                         </div>
-                        <div>
+                        <div className="flex items-center py-2 px-7 hover:bg-[#383838] hover:cursor-pointer">
                             <BiLibrary />
-                            <span>Your library</span>
+                            <span className="hidden lg:inline pl-2">Your library</span>
                         </div>
-                        <div>
+                        <div className="flex items-center py-2 px-7 hover:bg-[#383838] hover:cursor-pointer">
                             <RiSearch2Line />
-                            <span>Search</span>
+                            <span className="hidden lg:inline pl-2">Search</span>
                         </div>
-                        <div>
+                        <div className="flex items-center py-2 px-7 hover:bg-[#383838] hover:cursor-pointer">
                             <CgAddR />
-                            <span>Create playlist</span>
+                            <span className="hidden lg:inline pl-2">Create playlist</span>
                         </div>
-                        <div>
+                        <div className="flex items-center py-2 px-7 hover:bg-[#383838] hover:cursor-pointer">
                             <RiHeart3Line />
-                            <span>Liked songs</span>
+                            <span className="hidden lg:inline pl-2">Liked songs</span>
                         </div>
-                        <div>
+                        <div className="flex items-center py-2 px-7 hover:bg-[#383838] hover:cursor-pointer">
                             <IoIosRadio />
-                            <span>Saved episodes</span>
+                            <span className="hidden lg:inline pl-2">Saved episodes</span>
                         </div>
                     </IconContext.Provider>
                     

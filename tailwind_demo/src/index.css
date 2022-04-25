@@ -6,20 +6,3 @@ body {
     background-color: #181818;
     @apply font-semibold text-base text-white;
 }
-
-.sidebar > div > div {
-    @apply flex items-center py-2 px-7 hover:bg-[#383838] hover:cursor-pointer;
-}
-
-.sidebar > div > div > span {
-    @apply hidden lg:inline pl-2;
-}
-
-.track div {
-    @apply flex-grow truncate py-1 px-4;
-}
-
-.track > .track-num {
-    @apply flex-none grow-0;
-}
-
