@@ -5,7 +5,7 @@ export default function Release(props) {
                 <img src={props.cover} alt="" className="h-full w-full"/>
             </div>
             <div>
-                <h4 className="max-w-[150px] md:max-w-[250px] truncate">
+                <h4 className="w-48 truncate">
                     {props.name}
                 </h4>
                 <h5 className="text-sm text-[rgb(179,179,179)]">
