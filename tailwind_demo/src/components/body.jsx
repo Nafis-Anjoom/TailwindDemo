@@ -73,15 +73,15 @@ export default function Body() {
                 <Banner />
             </div>
             <div className="pl-5 pb-10 sm:pl-28 lg:pl-56">
-                <div className="flex items-center mt-7">
-                    <button className="bg-[#18b153] p-3 rounded-full text-center mr-9 hover:bg-[#21df6a]">
+                <div className="flex items-center mt-7 space-x-9">
+                    <button className="bg-[#18b153] p-3 rounded-full text-center hover:bg-[#21df6a]">
                         <div>
                             <span className="flex relative left-1">
                                 <IoMdPlay size={37} color="black" className=""/>
                             </span>
                         </div>
                     </button>
-                    <button className="border-[1.5px] border-[#686868] py-1.5 px-3 rounded-md font-semibold mr-9 hover:border-white">Follow</button>
+                    <button className="border-[1.5px] border-[#686868] py-1.5 px-3 rounded-md font-semibold hover:border-white">Follow</button>
                     <button className="opacity-40 hover:opacity-100"><BsThreeDots size={30} /></button>
                 </div>
                 <div className="flex flex-col 2xl:flex-row mt-4">
@@ -92,14 +92,20 @@ export default function Body() {
                     </div>
                     
                 </div>
-                <div className="text-2xl font-bold py-2">Popular releases</div>
-                <div className="flex overflow-y-auto">
-                    {popularReleases.map((release) => <Release {...release} />)}
-                </div>
-                <div className="text-2xl font-bold py-2">Albums</div>
-                <div className="flex overflow-y-auto">
-                    {albums.map((album) => <Release {...album} type="Album" />)}
-                </div>   
+                <div className="space-y-5">
+                    <div className="space-y-3">
+                        <div className="text-2xl font-bold py-2">Popular releases</div>
+                        <div className="flex overflow-y-auto space-x-3">
+                            {popularReleases.map((release) => <Release {...release} />)}
+                        </div>
+                    </div>
+                    <div className="space-y-3">
+                        <div className="text-2xl font-bold py-2">Albums</div>
+                        <div className="flex overflow-y-auto space-x-3">
+                            {albums.map((album) => <Release {...album} type="Album" />)}
+                        </div> 
+                    </div>
+                </div>  
             </div>
         </>
     );

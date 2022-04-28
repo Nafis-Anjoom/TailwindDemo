@@ -1,6 +1,6 @@
 export default function Release(props) {
     return (
-        <div className="bg-[#232323] p-4 pb-8 w-fit h-fit m-2 hover:bg-[#383838] rounded-md hover:cursor-pointer">
+        <div className="bg-[#232323] p-4 pb-8 w-fit h-fit hover:bg-[#383838] rounded-md hover:cursor-pointer">
             <div className="h-48 w-48">
                 <img src={props.cover} alt="" className="h-full w-full"/>
             </div>
